@@ -1,10 +1,5 @@
 <?php 
 session_start();
-/*$dns = 'mysql:host=localhost;dbname=cs_350';
-$username = 'student';
-$p = 'CS350';
-$db = new PDO($dns, $username, $p);
-*/
 $servername = 'localhost';
 $username = 'student';
 $password = 'CS350';
@@ -46,34 +41,6 @@ if (isset($_POST['submit'])) {
   }
 }
 
-/*
-if($_SERVER["REQUEST_METHOD"] == "POST"){    
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-  
-    $sql = "SELECT * FROM users WHERE uName = :username AND passwd = :password";
-    $stmt = $db->prepare($sql);
-    $stmt->bindParam(':username', $username);
-    $stmt->bindParam(':password', $password);
-    $stmt->execute();
-    
-    if ($stmt->rowCount() > 0) {
-        // Username and password match
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
-        $id = $row['id'];
-        $passwd = $row['passwd'];
-        if($password === $passwd){
-            session_regenerate_id();
-            $_SESSION['isVerified'] = 1;
-            $_SESSION['name'] = $username;
-            $_SESSION['id'] = $id;
-            echo "<script>location.href='admin.php';</script>";
-        }
-    } else {
-        // Username and password do not match
-        echo "Invalid username or password.";
-    }
-}*/
 ?>
 
 <html>
